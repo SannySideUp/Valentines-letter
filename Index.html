@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>💌 A Valentine for You</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- floating hearts background -->
+  <div class="hearts" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <header class="top">
+      <div class="badge">Valentine’s Letter</div>
+      <h1>For <span id="herName">My Love</span> 💘</h1>
+      <p class="sub">Tap the envelope to open your letter.</p>
+    </header>
+
+    <section class="stage">
+      <!-- Envelope -->
+      <button class="envelope" id="envelope" aria-label="Open the letter">
+        <div class="env-back"></div>
+        <div class="env-front"></div>
+        <div class="env-flap"></div>
+
+        <!-- Letter inside -->
+        <article class="letter" id="letter" aria-live="polite">
+          <div class="letter-head">
+            <div class="stamp">💗</div>
+            <div>
+              <h2>Happy Valentine’s Day</h2>
+              <p class="date" id="dateText"></p>
+            </div>
+          </div>
+
+          <div class="letter-body" id="letterBody">
+            <p>My love,</p>
+            <p>
+              I just wanted you to know how grateful I am for you. The way you exist in my life
+              makes everything feel warmer, calmer, and more beautiful.
+            </p>
+            <p>
+              I love your smile, your voice, and the little moments we share that feel like home.
+              If I could, I’d wrap every good feeling I have and hand it to you—so this letter is my try.
+            </p>
+            <p>
+              Thank you for being you. Today and always, I choose you.
+            </p>
+            <p class="sig">
+              Forever yours,<br />
+              <span id="myName">San</span>
+            </p>
+
+            <div class="promise">
+              <div class="promise-title">One small promise</div>
+              <div class="promise-text" id="promiseText">
+                I’ll keep showing up, loving you loudly and gently, and making you feel safe in my heart.
+              </div>
+            </div>
+          </div>
+
+          <div class="letter-actions">
+            <button class="btn" id="closeBtn" type="button">Close 💌</button>
+            <button class="btn ghost" id="confettiBtn" type="button">More love ✨</button>
+          </div>
+        </article>
+      </button>
+    </section>
+
+    <footer class="foot">
+      <span class="hint">Tip: You can edit the text inside <code>index.html</code>.</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
