@@ -60,28 +60,6 @@ document.addEventListener("keydown", (e) => {
 });
 
 // Floating hearts background
-const heartsContainer = document.querySelector(".hearts");
-const heartChars = ["💗","💖","💘","💞","💕","💓","❤️"];
-
-function spawnHeart() {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.textContent = heartChars[Math.floor(Math.random() * heartChars.length)];
-
-  const left = Math.random() * 100;
-  const size = 14 + Math.random() * 18; // px
-  const duration = 7 + Math.random() * 8; // s
-
-  heart.style.left = `${left}vw`;
-  heart.style.bottom = `-40px`;
-  heart.style.fontSize = `${size}px`;
-  heart.style.animationDuration = `${duration}s`;
-
-  heartsContainer.appendChild(heart);
-
-  // cleanup
-  setTimeout(() => heart.remove(), duration * 1000);
-}
 
 function burstHearts(count = 18) {
   for (let i = 0; i < count; i++) {
