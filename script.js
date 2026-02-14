@@ -61,10 +61,3 @@ document.addEventListener("keydown", (e) => {
 // steady background hearts
 
 // little burst on open
-function onOpenBurst() {
-  burstHearts(18);
-}
-const observer = new MutationObserver(() => {
-  if (envelope.classList.contains("open")) onOpenBurst();
-});
-observer.observe(envelope, { attributes: true, attributeFilter: ["class"] });
