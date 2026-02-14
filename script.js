@@ -49,10 +49,6 @@ closeBtn.addEventListener("click", (e) => {
 });
 
 // Extra love effect
-confettiBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  burstHearts(26);
-});
 
 // ESC closes
 document.addEventListener("keydown", (e) => {
@@ -61,14 +57,8 @@ document.addEventListener("keydown", (e) => {
 
 // Floating hearts background
 
-function burstHearts(count = 18) {
-  for (let i = 0; i < count; i++) {
-    setTimeout(spawnHeart, i * 40);
-  }
-}
 
 // steady background hearts
-setInterval(spawnHeart, 650);
 
 // little burst on open
 function onOpenBurst() {
